@@ -1,0 +1,71 @@
+///////  Reset for normalize ////////
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    //font-size: 10px;  =>  if we put this, we take px as absolute measeure
+    //thus 1rem = 10px   =>   on this way is easier to calculate
+    //but the best way is with % => it takes the measures of the browser
+    font-size: 62.5%;
+    text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+img{
+    max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+ol, ul {
+    list-style: none;
+	font-size: 0;
+}
+
+blockquote, q {
+    quotes: none;
+    &::before, &::after{
+        content: '';
+        content: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    color: inherit;
+    outline: 0;
+    text-decoration: none;
+    &:active,
+    &:focus,
+    &:hover,
+    &:visited,
+    &:link {
+        outline: 0;
+	    text-decoration: none;
+    }
+}
+
+body {
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+
+////// Base for the proyect itself //////
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $col-grey-dark;
+    padding: 3rem;
+}

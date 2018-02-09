@@ -1,0 +1,45 @@
+///// General structure => import the files in order ///////
+@import "abstract/_functions.scss";
+@import "abstract/_mixins.scss";
+@import "abstract/_variables.scss";
+
+@import 'base/base';
+@import 'base/animations';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import "components/button.scss";
+
+@import "layout/header.scss";
+
+@import 'pages/home';
+
+//////////////////////////////////////////////////////////////
+//BEM => block, element, modifier
+
+// .block {}
+// standalone component that is meaningful on its own
+// .block__element {}
+// part of block that has no standalone meaning
+// .block__element--modifier {}
+// a different version of a block or an element
+
+// actions are introduced as a class apart to be distinguished
+
+///////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////
+// the 7 - 1 pattern
+
+// 7 different forlders for partials SASS files, ans 1 main file
+// to complile all of them and then be imported.
+
+// abstracts
+// base
+// components
+// layout
+// pages
+// themes
+// vendors
+
+/////////////////////////////////////////////////////////////////
