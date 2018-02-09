@@ -8,10 +8,11 @@
         border-radius: 10rem;
         transition: all .2s ease;
         position: relative;
-        font-size: 1.6rem;
+        top: 0;
+        font-size: $default-font-size;
     }
     &:hover{
-        transform: translateY(-0.3rem);
+        top: -5px;
         box-shadow: 0 1rem 2rem rgba($col-black, 0.2);
         &::after{
             transform: scaleX(1.7) scaleY(1.4);
@@ -19,7 +20,7 @@
         }
     }
     &:active{
-        transform: translateY(-1px);
+        top: -1px;
         box-shadow: 0 0.5rem 1rem rgba($col-black, 0.2);
     }
 
@@ -52,5 +53,30 @@
         animation-fill-mode: forwards;
         //if the animation is not smoth enough
         backface-visibility: hidden;
+    }
+}
+
+.btn-text {
+    &:link,
+    &:visited{
+        font-size: $default-font-size;
+        color: $col-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $col-primary;
+        padding: 3px;
+        transition: all .2s;
+    }
+
+    &:hover{
+        background-color: $col-primary;
+        color: $col-white;
+        box-shadow: 0 1rem 2rem rgba($col-black, .15);
+        transform: translateY(-2px);
+    }
+
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba($col-black, .15);
+        transform: translateY(0px);
     }
 }

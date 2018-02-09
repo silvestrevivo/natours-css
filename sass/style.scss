@@ -9,7 +9,9 @@
 @import 'base/utilities';
 
 @import "components/button.scss";
+@import "components/composition.scss";
 
+@import "layout/grid.scss";
 @import "layout/header.scss";
 
 @import 'pages/home';
