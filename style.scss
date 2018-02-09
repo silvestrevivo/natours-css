@@ -1,6 +1,145 @@
-h1 {
-    text-align: center;
+///////////Variables/////////
+
+//light green: #7ed56f
+//Medium green: #55c57a
+//Dark green: #28b485
+
+////////reset//////////
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+//reset  end/////////
+
+/////////////////////////////////////////////////////////////////////
+//BEM => block, element, modifier
+
+// .block {}
+// standalone component that is meaningful on its own
+// .block__element {}
+// part of block that has no standalone meaning
+// .block__element--modifier {}
+// a different version of a block or an element
+
+// actions are introduced as a class apart to be distinguished
+
+/////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////
+// the 7 - 1 pattern
+
+// 7 different forlders for partials SASS files, ans 1 main file
+// to complile all of them and then be imported.
+
+// base
+// components
+// layout
+// pages
+// themes
+// abstracts
+// vendors
+
+/////////////////////////////////////////////////////////////////////
+
+.header{
+    height: 95vh;
+    background-image: linear-gradient(to right, rgba(126, 213, 111, 0.6), rgba(40, 180, 133, 0.59)), url('./img/hero.jpg');
+    background-size: cover;
+    background-position: top center;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    //https://bennettfeely.com/clippy/ examples for cliping
+
+    &__logo-box{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+
+    &__logo{
+        height: 35px;
+    }
+
+    &__text-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.heading-primary{
+    color: #ffffff;
     text-transform: uppercase;
-    color: salmon;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    &--main{
+        display: block;
+        font-size: 60px;
+        font-weight: 400;
+        letter-spacing: 35px;
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-delay: .5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        //if the animation is not smoth enough
+        backface-visibility: hidden;
+    }
+
+    &--sub{
+        display: block;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 17.4px;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-delay: .5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        opacity: 0;
+        //if the animation is not smoth enough
+        backface-visibility: hidden;
+    }
+}
+
+@keyframes moveInLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80%{
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
