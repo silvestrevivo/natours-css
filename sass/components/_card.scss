@@ -1,0 +1,84 @@
+.card{
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 50rem;
+
+  //functionality
+  &__size{
+    transition: all .8s ease;
+    height: 50rem;
+    color: $col-white;
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($col-black, .15);
+
+    &--front{
+      background-color: $col-white;
+    }
+
+    &--back{
+      transform: rotateY(180deg);
+      &-1{
+        background-image: linear-gradient(
+          to right bottom, $col-secondary-light, $col-secondary-dark);
+      }
+      &-2{
+        background-image: linear-gradient(
+          to right bottom, $col-primary-light, $col-primary-dark);
+      }
+      &-3{
+        background-image: linear-gradient(
+          to right bottom, $col-tertiary-light, $col-tertiary-dark);
+      }
+    }
+
+  }
+
+
+  &:hover &__size{
+    &--front{
+      transform: rotateY(-180deg);
+    }
+    &--back{
+      transform: rotateY(0deg);
+    }
+  }
+
+  //front side styling
+  &__picture{
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: screen;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &-1{
+      background-image: linear-gradient(
+        to right bottom,
+        $col-secondary-light,
+        $col-secondary-dark),
+        url('../img/nat-5.jpg');
+    }
+    &-2{
+      background-image: linear-gradient(
+        to right bottom,
+        $col-primary-light,
+        $col-primary-dark),
+        url('../img/nat-6.jpg');
+    }
+    &-3{
+      background-image: linear-gradient(
+        to right bottom,
+        $col-tertiary-light,
+        $col-tertiary-dark),
+        url('../img/nat-7.jpg');
+    }
+  }
+}
