@@ -8,7 +8,6 @@
   &__size{
     transition: all .8s ease;
     height: 50rem;
-    color: $col-white;
     font-size: 2rem;
     position: absolute;
     top: 0;
@@ -58,6 +57,8 @@
     background-blend-mode: screen;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 
     &-1{
       background-image: linear-gradient(
@@ -80,5 +81,78 @@
         $col-tertiary-dark),
         url('../img/nat-7.jpg');
     }
+  }
+  &__heading{
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: $col-white;
+    text-align: right;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    width: 65%;
+  }
+
+  &__heading-span{
+    padding: 1rem 1.5rem;
+    box-decoration-break: clone;
+    &--1{
+      background-image: linear-gradient(to right bottom,
+        rgba($col-secondary-light, .85),
+        rgba($col-secondary-dark, .85));
+    }
+    &--2{
+      background-image: linear-gradient(to right bottom,
+        rgba($col-primary-light, .85),
+        rgba($col-primary-dark, .85));
+    }
+    &--3{
+      background-image: linear-gradient(to right bottom,
+        rgba($col-tertiary-light, .85),
+        rgba($col-tertiary-dark, .85));
+    }
+  }
+
+  &__details{
+    ul{
+      list-style: none;
+      width: 80%;
+      margin: 20px auto 0;
+      li{
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+        &:not(:first-child){
+          border-top: 1px solid $col-grey-light-2;
+        }
+      }
+    }
+  }
+
+  //back side styling
+  &__cta{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+  }
+
+  &__price-box{
+    text-align: center;
+    margin-bottom: 8rem;
+    color: $col-white;
+  }
+
+  &__price-only{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value{
+    font-size: 6rem;
+    font-weight: 100;
   }
 }

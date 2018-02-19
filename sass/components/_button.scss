@@ -45,6 +45,14 @@
         }
     }
 
+    &--green{
+        background-color: $col-primary;
+        color: $col-white;
+        &::after{
+            background-color: $col-primary;
+        }
+    }
+
     &--animated{
         opacity: 0;
         animation-name: moveInBottom;
