@@ -10,6 +10,8 @@
   &__content{
     height: 100%;
     width: 100%;
+    // this is not yet supported for some browsers
     object-fit: cover;
   }
+  // https://coverr.co/ free videos for websites
 }
