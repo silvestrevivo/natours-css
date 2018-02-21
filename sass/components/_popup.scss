@@ -13,6 +13,7 @@
   &:target{
     opacity: 1;
     visibility: visible;
+    // this makes possible to activate the popup without javascript
   }
 
   &__close{

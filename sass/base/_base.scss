@@ -27,6 +27,9 @@ html {
     @include respond(phone){
         font-size: 43.75%; // 1rem = 7px, 7 / 16 = 43,75%
     }
+
+    // Thus design is done by default 1200-1800 px. Queries are for other
+    // sizes. To check them => http://sizzy.co/
 }
 
 img{
