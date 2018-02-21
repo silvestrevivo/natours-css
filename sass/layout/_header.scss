@@ -3,8 +3,15 @@
     background-image: linear-gradient(to right, rgba($col-primary-light, 0.6), rgba($col-primary-dark, 0.59)), url('../img/hero.jpg');
     background-size: cover;
     background-position: top center;
+    position: relative;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     //https://bennettfeely.com/clippy/ examples for cliping
+
+    @include respond(phone){
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
 
     &__logo-box{
         position: absolute;

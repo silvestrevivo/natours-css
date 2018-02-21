@@ -16,6 +16,12 @@
         opacity: 0;
         //if the animation is not smoth enough
         backface-visibility: hidden;
+
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
+
     }
 
     &--sub{
@@ -31,6 +37,11 @@
         opacity: 0;
         //if the animation is not smoth enough
         backface-visibility: hidden;
+
+        @include respond(phone){
+            letter-spacing: .5rem;
+        }
+
     }
 }
 
@@ -44,6 +55,13 @@
     display: inline-block;
     letter-spacing: 2px;
     transition: all .2s ease-in-out;
+
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
+    @include respond(phoe){
+        font-size: 2.5rem;
+    }
 
     &:hover{
         transform: skewY(2deg) skewX(15deg) scale(1.1);
