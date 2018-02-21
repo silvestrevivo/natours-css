@@ -4,7 +4,8 @@
   "description": "Pure css project following the Udemy Tutorial from @jonasschmedtman",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "build": "parcel build index.html --out-dir build/ --public-url ./"
   },
   "repository": {
     "type": "git",
