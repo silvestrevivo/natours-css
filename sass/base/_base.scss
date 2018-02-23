@@ -75,6 +75,24 @@ body {
 	-webkit-font-smoothing: subpixel-antialiased;
 }
 
+::-moz-selection{
+    text-shadow: none;
+    background: orangered;
+}
+
+::selection{
+    text-shadow: none;
+    background: orangered;
+}
+
+img::selection{
+    background: transparent;
+}
+
+img::-moz-selection{
+    background: transparent;
+}
+
 
 ////// Base for the proyect itself //////
 body {

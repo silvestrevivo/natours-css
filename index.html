@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>natours-css</title>
+    <title>Natours-CSS</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Pure css project following the Udemy Tutorial from @jonasschmedtman">
@@ -23,7 +23,7 @@
 
 </head>
 <body>
-
+    <!--            -->
     <!-- NAVIGATION -->
     <div class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
@@ -45,8 +45,7 @@
         </nav>
     </div>
 
-
-
+    <!--        -->
     <!-- HEADER -->
     <header class="header">
         <div class="header__logo-box">
@@ -88,9 +87,23 @@
 
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="./img/nat-1-large.jpg" alt="Photo1" class="composition__photo composition__photo--p1">
-                        <img src="./img/nat-2-large.jpg" alt="Photo2" class="composition__photo composition__photo--p2">
-                        <img src="./img/nat-3-large.jpg" alt="Photo3" class="composition__photo composition__photo--p3">
+                        <!-- 300w and 1000w are the width in px of the both image to read by the browser -->
+                        <img srcset="./img/nat-1.jpg 300w, ./img/nat-1-large.jpg 1000w"
+                            alt="Photo1"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            class="composition__photo composition__photo--p1"
+                            src="./img/nat-1-large.jpg">
+                        <img srcset="./img/nat-2.jpg 300w, ./img/nat-2-large.jpg 1000w"
+                            alt="Photo1"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            class="composition__photo composition__photo--p2"
+                            src="./img/nat-2-large.jpg">
+                        <img srcset="./img/nat-3.jpg 300w, ./img/nat-3-large.jpg 1000w"
+                            alt="Photo1"
+                            sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                            class="composition__photo composition__photo--p3"
+                            src="./img/nat-3-large.jpg">
+                        <!-- on this way whe decide what image to load dedending with of the browser -->
                     </div>
                 </div>
             </div>
@@ -344,6 +357,8 @@
             <picture class="footer__logo">
                 <source srcset="/dist/logo-green-small-1x.png 1x, /dist/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
                 <img srcset="./img/logo-green-1x.png 1x, ./img/logo-green-2x.png 2x" alt="Full logo" src="./img/logo-green-2x.png">
+                <!-- we decide resolution and size depending of screen and media query -->
+                <!-- 1x => low resolution screen, 2x => high resolution screen  -->
             </picture>
         </div>
         <div class="row">
@@ -366,7 +381,7 @@
         </div>
     </footer>
 
-
+    <!--        -->
     <!-- POP-UP -->
     <div class="popup" id="popup">
         <div class="popup__content">
@@ -385,99 +400,7 @@
             </div>
         </div>
     </div>
-
-    <!-- <section class="grid-test">
-        <div class="row">
-            <div class="col-1-of-2">
-                col-1-of-2
-            </div>
-            <div class="col-1-of-2">
-                col-1-of-2
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-3">
-                col-1-of-3
-            </div>
-            <div class="col-1-of-3">
-                col-1-of-3
-            </div>
-            <div class="col-1-of-3">
-                col-1-of-3
-            </div>
-        </div>
-    </section> -->
-
-
-    <!-- <section class="grid-test">
-        <div class="row">
-            <div class="col-1-of-2">
-                col 1 of 2
-            </div>
-            <div class="col-1-of-2">
-                col 1 of 2
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-3">
-                col 1 of 3
-            </div>
-            <div class="col-1-of-3">
-                col 1 of 3
-            </div>
-            <div class="col-1-of-3">
-                col 1 of 3
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-3">
-                col 1 of 3
-            </div>
-            <div class="col-2-of-3">
-                col 2 of 3
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-4">
-                col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                col 1 of 4
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-4">
-                col 1 of 4
-            </div>
-            <div class="col-1-of-4">
-                col 1 of 4
-            </div>
-            <div class="col-2-of-4">
-                col 2 of 4
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-1-of-4">
-                col 1 of 4
-            </div>
-            <div class="col-3-of-4">
-                col 3 of 4
-            </div>
-        </div>
-    </section> -->
-
+    <!--        -->
 
     <!-- javascript to bundle sass -->
     <script src="./index.js"></script>
