@@ -13,8 +13,9 @@
 
     // 192dpi => resolution for screen in macbook
     // for high resolution screen and except phones, it loads the bigest one
-    @media (min-resolution: 192dpi) and (min-width: 37.5em),
-        (min-width: 125em){
+    @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+        only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em),
+        only screen and (min-width: 125em){
         // it loads the bigest image in any computer with a very
         // large screen with this last option
         background-image: linear-gradient(to right,
@@ -22,6 +23,8 @@
             rgba($col-primary-dark, 0.59)),
             url('../img/hero.jpg');
     }
+    // all browsers use 'min-resolution' but with Safari we have to do it
+    // with => '-webkit-min-device-pixel-ratio' ( 1x or 2x )
 
     @include respond(phone){
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);

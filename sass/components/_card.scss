@@ -155,7 +155,11 @@
   }
 
   ////////////// media query to change the whole design ///////////////
-  @include respond(tab-port){
+  @media only screen and (max-width: 56.25em),
+          only screen and( hover: none) {
+    // on this way we decide to aply this style for devices which don't
+    // support hover efects and has an screen bigger dan 56.25, like
+    // an iPad Pro of big tablets.
     height: auto;
     border-radius: 3px;
     background-color: $col-white;
